@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+int main(){
+	int x,y,z,mayor=0,menor,i,j;
+	int m[5][3]={{3,1,5},{6,7,8},{2,2,3},{7,5,6},{9,3,2}};
+	
+	for(i=0;i<5;i++){
+		for(j=0;j<3;j++){
+			printf("%d\t",m[i][j]);
+		}
+		printf("\n");
+	}
+	
+	//El numero mayor
+	for(i=0;i<5;i++){
+		for(j=0;j<3;j++){
+			if(mayor<m[i][j]){
+			    mayor=m[i][j];
+			}
+		}
+	}
+	//el numero mayor
+	menor=mayor;
+	for(i=0;i<5;i++){
+		for(j=0;j<3;j++){
+			if(menor>m[i][j]){
+			    menor=m[i][j];
+			}
+		}
+	}
+	//imprimimos los numeros mayores y menores
+	printf("La venta mas alta es: %i\n",mayor);
+	printf("La venta mas baja es: %i",menor);
+
+	return 0;
+}
+
+
+
